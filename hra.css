@@ -238,12 +238,12 @@ h1 {
     }
     a {
         width: 100px;
-        height: 50px;
+        height: 40px;
         font-size: 20px;
         top: 48%;
     }
     a:before {
-        height: 50px;
+        height: 40px;
     }
     a:hover::before {
         width: 100px;
@@ -300,6 +300,13 @@ h1 {
     }    
     .t {
         line-height: 15px;
+    }
+    a {
+        font-size: 14px;
+        height: 30px;
+    }
+    a:before {
+        height: 30px;
     }
 
 }
