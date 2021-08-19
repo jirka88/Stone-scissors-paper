@@ -1,0 +1,361 @@
+body {
+    margin:0;
+    padding:0;
+}
+.pole {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.pole .player {
+    width: 50%;
+    height: 100vh;
+    background: rgb(0, 255, 34);
+}
+.pole .player .choose{
+    position: absolute;
+        top: 50%;
+        left: 20%;
+      transform: translate(-50%, -50%) ;
+
+}
+.pole .player .choose img {
+    cursor: pointer;
+}
+img {
+    width: 450px;
+}
+.pole .enemy {
+    width: 50%;
+    height: 100vh;
+    background: red;
+}
+.pole .enemy .choose{
+    position: absolute;
+    left: 79%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+p {
+    position: relative;
+    top: 65%;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    width: 160px;
+    height: 70px;
+    display:Flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    border: 1px blue solid;
+    color: white;
+    border-radius: 12px;
+    background: rgb(23, 85, 255);
+    cursor: pointer;
+}
+a:before {
+    content:"";
+    z-index: -1;
+    position: absolute;
+    width: 0px;
+    height: 70px;
+    border-radius: 12px;
+    background: rgb(0, 27, 180);
+    cursor: pointer;
+}
+a:hover::before {
+    width: 160px;
+    transition: 0.5s ease-in-out all;
+}
+h1 {
+    position: relative;
+    top: 10%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.t {
+    position: relative;
+    top: 60%;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    width:20% ;
+    height: 100vh;
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+    background: cornflowerblue;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+@media only screen and (min-width: 2800px) {
+    h1 {
+        font-size: 1.5vw;
+    }
+    a  {
+        width: 10%;
+        height: 6vh;
+        font-size: 1.32vw;
+    }
+    a:before {    
+        width: 0px;
+        height: 100px;
+    }
+    a:hover::before {
+        width: 10%;
+        transition: 0.5s ease-in-out all;
+    }
+    img {
+        width: 25vw;
+    }
+    p {
+        font-size: 1.875vw;
+    }
+    .t {
+        font-size: 1.48vw;
+    }
+    }
+@media only screen and (max-width: 1540px) {
+    .container {
+        width: 30%;                  
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 24px;
+    }
+    img {
+        width: 350px;
+    }
+    .pole .player .choose {
+        left:18%;
+    }
+    .pole .enemy .choose {
+        left: 80%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .pole .player{
+        width: 100%;
+        height: 35vh;
+        margin:0;
+    }
+    a {
+        width: 150px;
+        height: 60px;      
+    }
+    a:before {
+        height: 60px;    
+    }
+    a:hover::before {
+        width: 150px;
+    }
+    .pole .enemy {
+        width: 100%;
+        height: 35vh;
+    }
+    .container {
+        width: 100%;
+        height: 30vh;
+        border: none;
+        margin-top: -13px;    
+    }
+    .pole .player .choose {
+        all:unset;
+        position: relative;
+        top:10%;
+        left:25%;
+    }
+    .pole .enemy .choose {
+        all:unset;
+        position:relative;
+        top:10%;
+        left:25%;       
+    }
+    .pole {
+        display:block;
+    }
+    img {
+        width: 45%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 20px;
+        top: 5%;
+        left: -1%;
+    }
+    #text {
+        text-align: center;
+    }
+    img {
+        display: inline-block;
+    }
+.container {
+    padding: 0;
+}
+.t {
+    top: 55%;
+}
+}
+/* větší mobily */
+@media only screen and (max-width: 480px) {
+    
+    .pole {
+        display:block;
+    }
+    img {
+        width: 60%;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    a {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        top: 48%;
+    }
+    a:before {
+        height: 50px;
+    }
+    a:hover::before {
+        width: 100px;
+        transition: 0.5s ease-in-out all;
+    }
+    .pole .player{
+        width: 100%;
+        height: 35vh;
+        margin:0;
+    }
+    .pole .enemy {
+        width: 100%;
+        height: 35vh;
+    }
+    .container {
+        width: 100%;
+        height: 30vh;
+        border: none;
+        margin-top: -13px;    
+    }
+    .pole .player .choose {
+        all:unset;
+        position: relative;
+        top:10%;
+        left:20%;
+    }
+    .pole .enemy .choose {
+        all:unset;
+        position:relative;
+        top:10%;
+        left:20%;       
+    }
+    p {
+        font-size: 20px;
+        top: 10%;
+    }
+    #text {
+        text-align: center;
+    }
+    img {
+        display: inline-block;
+    }
+    .t {
+        top: 40%;
+    }
+}
+/* menší mobily  */
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 14px !important;
+    }    
+    .t {
+        line-height: 15px;
+    }
+
+}
+/* pevná velikost  */
+@media only screen and (max-height: 460px) {
+    .pole {
+        height: 460px;
+    }
+    .pole .player {
+        height: 155px;
+    }
+    .pole .enemy {
+        height: 155px;
+    }
+    .pole .container {
+        height: 150px;
+    }
+    a {
+        top: 225px;
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+    }
+    a:hover::before {
+        width: 100px;
+        height: 50px;
+    }
+    p {
+        top: 5%;
+    }
+    img {
+        width: 25% !important;
+        position: relative;
+        left: 11%;
+    }
+    .pole .enemy .choose {
+        top: 15%;
+    }
+    .t {
+        line-height: 10px;
+        top: 45%;
+    }
+    
+}
+
+@media only screen and (max-height: 580px) and (max-width: 1024px) {
+    img {
+        width: 50%;
+    }
+    .pole .player .choose {
+        left: 25%;
+    }
+    .pole .enemy .choose {
+        left: 25%;
+    }
+    h1,h3,p {
+        font-size: 16px;
+    }
+}
