@@ -114,10 +114,10 @@ h1 {
     }
     a:before {    
         width: 0px;
-        height: 100px;
+        height: 6vh;
     }
     a:hover::before {
-        width: 10%;
+        width: 100%;
         transition: 0.5s ease-in-out all;
     }
     img {
