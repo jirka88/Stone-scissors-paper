@@ -1,5 +1,12 @@
 let count = 0;
-let pocet = 1;
+window.onload = function () {
+    var pocet = +localStorage.getItem("count");
+    if (pocet === null) {
+        pocet = 0;
+    }
+    document.getElementById("poradi").innerHTML = "Výher v řadě: " + pocet;
+}
+
 function Vyber() {
     count++;
     let img = document.getElementById("ob");
@@ -71,15 +78,21 @@ function Vyhra() {
     document.getElementById("rozhodnuti").innerHTML = "Vyhrál jsi!";
     pocet++;
     document.getElementById("poradi").innerHTML = "Výher v řadě: " + pocet;
+    Setter();
 
 }
 function Prohra() {
     document.getElementById("rozhodnuti").innerHTML = "Prohrál jsi!";
     pocet = 0;
     document.getElementById("poradi").innerHTML = "Výher v řadě: " + pocet;
+    Setter();
 }
 function remiza() {
     document.getElementById("rozhodnuti").innerHTML = "Remíza!";
     pocet = 0;
-    document.getElementById("poradi").innerHTML = "Výher v řadě: " + pocet
+    document.getElementById("poradi").innerHTML = "Výher v řadě: " + pocet;
+    Setter();
+}
+function Setter() {
+    localStorage.setItem("count", pocet);
 }
